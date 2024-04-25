@@ -201,16 +201,14 @@ adddtn.addEventListener('click', () => addnewnote());
 
 // responsive alert
 function checkScreenWidth() {
-    if (!localStorage.getItem('alertShown')) {
-        if (window.innerWidth <= 600) {
-            alert("Please Open The Project in Desktop \n  -Rushi Parekar");
-            localStorage.setItem('alertShown', 'true');
+            if (window.innerWidth <= 600) {
+                alert("Please Open The Project in Desktop \n  -Rushi Parekar");
+            }
         }
-    }
-}
-window.addEventListener('resize', checkScreenWidth);
-checkScreenWidth();
+        window.addEventListener('resize', checkScreenWidth);
 
+        // Run the check on initial load
+        checkScreenWidth();
 
 
 //
