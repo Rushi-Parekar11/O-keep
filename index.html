@@ -201,12 +201,16 @@ adddtn.addEventListener('click', () => addnewnote());
 
 // responsive alert
 function checkScreenWidth() {
-  if (window.innerWidth <= 600) {
-    alert("Please Open The Project in Desktop \nFor Better Experience ! \n  -Rushi Parekar");
-  }
+    if (!localStorage.getItem('alertShown')) {
+        if (window.innerWidth <= 600) {
+            alert("Please Open The Project in Desktop \n  -Rushi Parekar");
+            localStorage.setItem('alertShown', 'true');
+        }
+    }
 }
 window.addEventListener('resize', checkScreenWidth);
 checkScreenWidth();
+
 
 
 //
